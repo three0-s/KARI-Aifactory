@@ -1,6 +1,8 @@
 #! /bin/bash 
 
 python tools/test.py models/230721-1345/lsk_s_ema_fpn_1x_kari_ms_le90.py models/230721-1345/model-230721-1345_epoch_11.pth --work-dir models/230721-1345 --format-only
+# you can change '**/Task1_container.txt' to the specific version of the results
+
 python make_submission.py --txt models/230721-1345/.subm/Task1_container.txt --outdir models/230721-1345
 
 python tools/test.py models/230722-1556/lsk_s_ema_fpn_1x_kari_ms_le90.py models/230722-1556/model-230722-1556_epoch_11.pth --work-dir models/230722-1556 --format-only
