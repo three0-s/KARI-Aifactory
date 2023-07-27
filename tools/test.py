@@ -247,7 +247,7 @@ def main():
             mmcv.dump(outputs, args.out)
         timestamp = time.strftime('%Y%m%d_%H%M%S', time.localtime())
         kwargs = {"submission_dir":
-                    osp.join(args.work_dir, '.subm')} \
+                    osp.join(args.work_dir, timestamp, '.subm')} \
                     if args.eval_options is None else args.eval_options
         if args.format_only:
             dataset.format_results(outputs, **kwargs)
